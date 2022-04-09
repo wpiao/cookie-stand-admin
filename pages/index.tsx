@@ -14,7 +14,11 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center"></main>
+      <main className="flex w-full flex-1 flex-col items-center justify-center px-20 text-center">
+        <form>
+          <div>Create Cookie Stand</div>
+        </form>
+      </main>
       <Footer />
     </div>
   )

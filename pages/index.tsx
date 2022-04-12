@@ -2,9 +2,12 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import ReportTable from '../components/ReportTable'
 import useInput from '../hooks/useInput'
+import { useState } from 'react'
 
 const Home: NextPage = () => {
+  const [cookieStands, setCookieStands] = useState([])
   const [location, bindLocation, resetLocation] = useInput('')
   const [
     maxCustomersPerHour,
@@ -21,6 +24,13 @@ const Home: NextPage = () => {
 
   function createHandler(e: any) {
     e.preventDefault()
+    const cookieStand = {
+      location,
+      maxCustomersPerHour,
+      minCustomersPerHour,
+      aveCookiesPerSale,
+    }
+    setCookieStands([...cookieStands, cookieStand])
     resetLocation()
     resetMaxCustomersPerHour()
     resetMinCustomersPerHour()
@@ -102,6 +112,14 @@ const Home: NextPage = () => {
             </button>
           </div>
         </form>
+        <div className="my-2 mx-auto flex-col text-center text-sm">
+          <div className="p-2">Report Table Coming Soon...</div>
+          <div className="p-4">
+            {cookieStands.map((cookieStand, key) => (
+              <p key={key}>{JSON.stringify(cookieStand)}</p>
+            ))}
+          </div>
+        </div>
       </main>
       <Footer />
     </div>

@@ -1,3 +1,13 @@
+# Get Started
+
+## Lab 37 - React I - 4/7/2022
+
+1. Clone down the repo
+2. Run command `npm install` to install dependencies
+3. cd into the cookie-stand-admin folder
+4. Run command `npm run dev` to start the server
+5. Check out the app at `http://localhost:3000/`
+
 # Next.js + Tailwind CSS Example
 
 This example shows how to use [Tailwind CSS](https://tailwindcss.com/) [(v3.0)](https://tailwindcss.com/blog/tailwindcss-v3) with Next.js. It follows the steps outlined in the official [Tailwind docs](https://tailwindcss.com/docs/guides/nextjs).
